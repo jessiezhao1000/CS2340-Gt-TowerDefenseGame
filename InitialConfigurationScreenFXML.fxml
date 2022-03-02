@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-color: #AFDBFD;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.peons.peonstd.ConfigurationScreenController">
+
+    <children>
+      <ImageView disable="true" fitHeight="565.0" fitWidth="945.0" layoutX="-30.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cloud.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="639.0" fitWidth="649.0" layoutX="380.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@appaFlying.PNG" />
+         </image>
+      </ImageView>
+        <TextField fx:id="nameField" layoutX="338.0" layoutY="200.0" prefHeight="39.0" prefWidth="226.0" promptText="Enter your name">
+         <font>
+            <Font name="Herculanum" size="15.0" />
+         </font></TextField>
+
+        <Button fx:id="enter" layoutX="576.0" layoutY="201.0" mnemonicParsing="false" onAction="#onEnterButtonClicked" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: #61352a#61352a #61352a#61352a;" text="Enter" textFill="#f9eac4">
+         <font>
+            <Font name="Herculanum" size="21.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+
+        <Button fx:id="startGame" layoutX="430.0" layoutY="334.0" mnemonicParsing="false" onAction="#onStartGameButtonClicked" prefHeight="63.0" prefWidth="150.0" style="-fx-background-color: #61352a#61352a;" text="Start Game" textFill="#f9eac4">
+         <font>
+            <Font name="Herculanum" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+
+        <Label fx:id="nameDisplay" layoutX="34.0" layoutY="18.0" text="Player Name:" textFill="#61352a">
+         <font>
+            <Font name="Herculanum" size="25.0" />
+         </font></Label>
+
+        <Label fx:id="invalidName" layoutX="212.0" layoutY="200.0" text="Please enter valid name" visible="false">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+
+        <!--Change to Toggle Group
+        https://stackoverflow.com/questions/53467588/how-to-implement-togglegroup-in-fxml-file-using-spring-vs-javafx-->
+        <RadioButton fx:id="easyBtn" layoutX="312.0" layoutY="275.0" mnemonicParsing="false" text="Easy" textFill="#61352a">
+            <toggleGroup>
+                <ToggleGroup fx:id="difficultyGroup" />
+            </toggleGroup>
+         <font>
+            <Font name="Herculanum" size="23.0" />
+         </font>
+        </RadioButton>
+        <RadioButton fx:id="medBtn" layoutX="433.0" layoutY="275.0" mnemonicParsing="false" text="Medium" textFill="#61352a" toggleGroup="$difficultyGroup">
+         <font>
+            <Font name="Herculanum" size="23.0" />
+         </font></RadioButton>
+        <RadioButton fx:id="hardBtn" layoutX="597.0" layoutY="275.0" mnemonicParsing="false" text="Hard" textFill="#61352a" toggleGroup="$difficultyGroup">
+         <font>
+            <Font name="Herculanum" size="23.0" />
+         </font></RadioButton>
+      <ImageView fitHeight="142.0" fitWidth="292.0" layoutX="118.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@momo.PNG" />
+         </image>
+      </ImageView>
+
+    </children>
+</AnchorPane>
